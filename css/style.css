@@ -269,4 +269,14 @@ h1, h2, h3 {
     .features {
         grid-column: 1 / -1;
     }
+
+.generator-list {
+    list-style: disc inside;
+    padding-left: 0;
+}
+
+.generator-list li {
+    margin-bottom: 12px; /* medzera medzi odrážkami */
+}
+
 }
