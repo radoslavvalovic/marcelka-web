@@ -1,0 +1,161 @@
+/* Kontajner pre obsah – môže zostať */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Horný panel s logom a názvom */
+.top-bar {
+    display: flex;
+    align-items: center;        /* zarovná logo a text na rovnakú výšku */
+    padding: 20px 20px 10px;    /* viac priestoru hore, menej dole = väčší odstup od nav-bar */
+    background: #d5cec2;
+}
+
+.logo-img {
+    height: 45px;               /* menšie logo */
+    margin-right: 15px;
+     display: block;
+}
+
+.logo-text {
+    font-size: 28px;
+    color: #129e9e;
+    font-weight: bold;
+    margin: 0;                   /* zarovnanie pekne na stred */
+    line-height: 1;             /* presné zarovnanie pri menšom logu */
+}
+
+/* Navigačný panel */
+.nav-bar {
+    background-color: #129e9e;
+    width: 100%;
+    margin-top: 5px;            /* jemné oddelenie navigácie */
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    margin: 0;
+}
+
+.nav li {
+    margin: 0 20px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 4px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+.intro{ padding:24px 0; }
+.features ul{ margin:0; padding-left:20px; }
+
+
+.card-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin-top:16px; }
+.card{ background:#f8fafc; padding:16px; border-radius:8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.card h3{ margin-top:0; }
+
+
+.gallery-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:12px; }
+.gallery-grid figure{ margin:0; background:#fff; border-radius:8px; box-shadow:0 1px 6px rgba(0,0,0,0.08); }
+.gallery-grid img{ display:block; width:100%; height:150px; object-fit:cover; }
+.gallery-grid figcaption{ padding:8px; font-size:0.9rem; }
+
+
+.contact-form{ max-width:480px; display:flex; flex-direction:column; gap:8px; }
+.contact-form label{ display:flex; flex-direction:column; font-size:0.9rem; }
+.contact-form input, .contact-form textarea{ padding:8px; border-radius:6px; border:1px solid #cbd5e1; }
+.contact-form button{ padding:10px 12px; border:none; border-radius:6px; background:#0f172a; color:#fff; cursor:pointer; }
+
+
+.site-footer{ background:#f1f5f9; padding:12px 0; margin-top:24px; }
+
+.button-link {
+    display: inline-block; /* Aby sa dali nastaviť padding a margin */
+    padding: 10px 20px; /* Vnútorné odsadenie */
+    background-color: #007bff; /* Modrá farba pozadia - typická pre tlačidlo */
+    color: white; /* Biela farba textu */
+    text-decoration: none; /* Odstráni podčiarknutie odkazu */
+    border: none; /* Odstráni prípadný rám */
+    border-radius: 5px; /* Zaoblené rohy */
+    font-weight: bold; /* Tučný text */
+    transition: background-color 0.3s ease; /* Pre plynulú zmenu farby pri prechode myšou */
+}
+
+/* Štýl pri prechode myšou (Hover efekt) */
+.button-link:hover {
+    background-color: #0056b3; /* Tmavšia modrá pri nabehnutí myšou */
+    cursor: pointer; /* Zmena kurzora na ruku */
+}
+
+/* Responsívne: zmena layoutu pre širšie obrazovky (dvojstĺpcový obsah) */
+@media(min-width:900px){
+main.container{ display:grid; grid-template-columns: 2fr 1fr; gap:24px; }
+.intro, .features{ grid-column:1 / -1; }
+}
+
+
+/* Jednoduchá estetická drobnosť */
+h1,h2,h3{ color:#0b1724; }
+
+.two-columns {
+    column-count: 2;        /* dva stĺpce */
+    column-gap: 40px;       /* medzera medzi stĺpcami */
+    list-style: none;       /* voliteľne: skrytie odrážok */
+    padding: 0;
+}
+
+.two-columns li {
+    break-inside: avoid;    /* zabráni rozdeleniu jedného li medzi dva stĺpce */
+    margin-bottom: 20px;
+}
+.back-to-home a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.back-to-home a:hover {
+    background-color: #005fa3;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 stĺpce */
+    gap: 20px;
+}
+
+.gallery-grid figure {
+    margin: 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;          /* obrázky sa NEBUDÚ rezať */
+    display: block;
+    object-fit: contain;   /* ukáže celý obraz */
+}
+
+.gallery-grid figcaption {
+    text-align: center;
+    padding: 8px 0;
+}
+
+
+/* Koniec css */
